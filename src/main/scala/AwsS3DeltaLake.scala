@@ -48,7 +48,7 @@ object AwsS3DeltaLake {
       .add("county",StringType)
       .add("company",StringType)
       .add("jobTitle",StringType)
-      .add("date",DateType)
+      .add("date",StringType)
 
     val personDF = df1.select(from_json(col("value"), schema).as("data"))
       .select("data.*")
